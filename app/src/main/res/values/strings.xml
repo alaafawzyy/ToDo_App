@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ToDo</string>
+    <string name="todo">TODO\n</string>
+    <string name="to_do_list">To Do List</string>
+    <string name="tasks">tasks</string>
+    <string name="settings">settings</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="title">this is title</string>
+    <string name="description">Description</string>
+    <string name="select_date">select date</string>
+    <string name="select_time">select time</string>
+    <string name="save">Save</string>
+    <string name="add_new_task">Add New Task</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="modes">Modes</string>
+    <string name="light">Light</string>
+    <string name="done">Done!</string>
+    <string name="edit_todo">Edit Todo</string>
+</resources>
