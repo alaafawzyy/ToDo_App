@@ -6,7 +6,7 @@ This project is a **To-Do application** developed using Kotlin and Android Studi
 - **Database:** Room DB
 - **Architecture:** MVVM & Clean Architecture
 - **UI Framework:** Material Design
-- - **Data Binding:** Data binding is used for linking the UI components with the data in the app, making it more efficient to update the UI based on changes in the underlying data.
+- **Data Binding:** Data binding is used for linking the UI components with the data in the app, making it more efficient to update the UI based on changes in the underlying data.
 
 ## Features
 - Add new tasks with title and description.
