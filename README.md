@@ -2,6 +2,10 @@ This project appears to be a To-Do application developed using Kotlin and Androi
 
 Technologies:
 Kotlin.
+Clean Arch.
 MVVM.
+Repository Pattern.
 Room DB.
 Matrial Design.
+
+
