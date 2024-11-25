@@ -1,4 +1,4 @@
-package com.example.todo.com.example.todo_app.ui.activity
+package com.example.todo.com.example.todo_app.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.todo.R
+import com.example.todo.com.example.todo_app.ui.activity.HomeActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

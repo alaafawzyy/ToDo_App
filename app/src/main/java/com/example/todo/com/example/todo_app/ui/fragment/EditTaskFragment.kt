@@ -66,7 +66,7 @@ class EditTaskFragment:Fragment() {
             description = binding.content.description.toString(),
             date = calender.time
         )
-        TaskdataBase.getInctace(requireContext()).getTasksDao()
+        TaskdataBase.getInctace().getTasksDao()
             .UpdateTask(newTask)
     }
     private fun addDatePicker() {

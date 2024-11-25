@@ -56,6 +56,8 @@ class TaskAdapter(private var taskList: MutableList<Tasks>?):RecyclerView.Adapte
 
     class TasksViewHolder(val binding: ItemTaskBinding):ViewHolder(binding.root){
         fun bind(tasks: Tasks){
+            binding.task=tasks
+            binding.invalidateAll()
             binding.title.text=tasks.title
             val simpleDateFormat=SimpleDateFormat("dd/MM/yyyy",Locale.getDefault())
             val dateAsString=simpleDateFormat.format(tasks.date)

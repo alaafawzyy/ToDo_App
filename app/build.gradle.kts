@@ -26,8 +26,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-        }
-    }
+         }
+     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -36,12 +36,14 @@ android {
         jvmTarget = "1.8"
     }
 
-    buildFeatures {
+      buildFeatures {
+
         viewBinding =true
-    }
+         dataBinding=true
+     }
 }
 
-dependencies {
+ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -59,4 +61,11 @@ dependencies {
     implementation ("com.github.prolificinteractive:material-calendarview:2.0.0")
     //SwipeLayout
     implementation ("com.github.zerobranch:SwipeLayout:1.3.1")
+
+
+
+        implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+        implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+
+
 }
