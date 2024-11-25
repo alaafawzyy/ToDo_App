@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@color/blue"
+        android:src="@color/pink"
         />
     <TextView
         android:id="@+id/language_txt"
@@ -36,7 +36,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        app:boxStrokeColor="@color/blue"
+        app:boxStrokeColor="@color/pink"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         app:boxBackgroundColor="@color/bottom_nav_bg_color"
         android:drawSelectorOnTop="true"
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="none"
-            android:textColor="@color/blue"
+            android:textColor="@color/pink"
             android:text="@string/english"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,7 +70,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        app:boxStrokeColor="@color/blue"
+        app:boxStrokeColor="@color/pink"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         app:boxBackgroundColor="@color/bottom_nav_bg_color"
         android:drawSelectorOnTop="true"
@@ -81,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="none"
-            android:textColor="@color/blue"
+            android:textColor="@color/pink"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 

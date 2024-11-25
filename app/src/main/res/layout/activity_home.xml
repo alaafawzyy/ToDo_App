@@ -5,7 +5,7 @@
     android:id="@+id/main"
 
     android:layout_width="match_parent"
-android:background="@color/activity_bg"
+     android:background="@color/bg_gray"
     android:layout_height="match_parent"
     >
 
@@ -18,7 +18,7 @@ android:background="@color/activity_bg"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/blue"
+            android:background="@color/pink"
             >
             <TextView
                 android:id="@+id/title"
@@ -37,47 +37,65 @@ android:background="@color/activity_bg"
 
            />
 
+ <androidx.cardview.widget.CardView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_gravity="bottom"
+    app:cardCornerRadius="100dp"
+     >
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="bottom"
-        android:backgroundTint="@color/white"
-        app:fabAlignmentMode="center"
-        app:layout_anchorGravity="bottom"
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         >
 
-        >
+         <com.google.android.material.bottomappbar.BottomAppBar
+             android:id="@+id/bottomAppBar"
+             android:layout_width="match_parent"
+             android:layout_height="80dp"
+             android:layout_gravity="bottom"
+             app:fabAlignmentMode="center"
+             android:background="@drawable/bg_bottom_nav_bar"
+             app:layout_anchorGravity="bottom"
+             app:layout_constraintBottom_toBottomOf="parent"
+
+             >
+
+
+             <com.google.android.material.bottomnavigation.BottomNavigationView
+                 android:id="@+id/bottom_nav_view"
+                 android:layout_width="match_parent"
+                 android:layout_height="80dp"
+                 app:menu="@menu/nav_menu"
+                 android:background="@drawable/bg_bottom_nav_bar"
+                 app:itemActiveIndicatorStyle="@null"
+                 app:itemBackground="@null"
+                 app:itemIconSize="30dp"
+                 app:itemIconTint="@color/selector_btm_nav_icon"
+                 app:labelVisibilityMode="unlabeled"
+                 >
+
+             </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+         </com.google.android.material.bottomappbar.BottomAppBar>
+
+         <com.google.android.material.floatingactionbutton.FloatingActionButton
+             android:id="@+id/fab_add_task"
+             android:layout_width="wrap_content"
+             android:layout_height="65dp"
+             android:backgroundTint="@color/pink"
+             android:src="@drawable/baseline_add_24"
+            app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+
+             android:tintMode="@color/white"
+             app:layout_anchor="@id/bottomAppBar"
+             />
+     </androidx.constraintlayout.widget.ConstraintLayout>
+ </androidx.cardview.widget.CardView>
 
 
 
-
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav_view"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:menu="@menu/nav_menu"
-            app:itemActiveIndicatorStyle="@null"
-            app:itemBackground="@null"
-             app:itemIconSize="25dp"
-             app:itemIconTint="@color/selector_btm_nav_icon"
-            app:labelVisibilityMode="unlabeled"
-            >
-
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-    </com.google.android.material.bottomappbar.BottomAppBar>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_add_task"
-        android:layout_width="wrap_content"
-        android:layout_height="65dp"
-        android:backgroundTint="@color/blue"
-        android:src="@drawable/baseline_add_24"
-        android:tintMode="@color/white"
-        app:layout_anchor="@id/bottomAppBar"
-     />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

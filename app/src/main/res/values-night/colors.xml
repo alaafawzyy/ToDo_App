@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="activity_bg">#060e1e</color>
-    <color name="blue">#5D9CEC</color>
+    <color name="pink">#e89dad</color>
     <color name="text_color">#0C0C0C</color>
     <color name="bottom_nav_bg_color">@color/black</color>
     <color name="lime">#2B2C2B</color>

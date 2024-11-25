@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/activity_bg"
+    android:background="@color/bg_gray"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -12,7 +12,7 @@
         android:id="@+id/top_view"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:src="@color/blue"
+        android:src="@color/pink"
         app:layout_constraintTop_toTopOf="parent"
 
        />
@@ -43,7 +43,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
                 app:mcv_showOtherDates="all"
-                app:mcv_selectionColor="@color/blue"
+                app:mcv_selectionColor="@color/pink"
                 app:mcv_calendarMode="week"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -53,7 +53,7 @@
         android:id="@+id/rvTasks"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/activity_bg"
+        android:background="@color/bg_gray"
         app:layout_constraintTop_toBottomOf="@id/cardView"
         app:layout_constraintBottom_toBottomOf="parent"
         android:padding="10dp"

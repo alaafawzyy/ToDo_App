@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/activity_bg"
+    android:background="@color/bg_gray"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="@layout/task_details_activity"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:src="@color/blue"
+        android:src="@color/pink"
         app:layout_constraintTop_toTopOf="parent"
         />
 
@@ -150,7 +150,7 @@
                    android:textStyle="bold"
                     android:textSize="18sp"
                     android:textColor="@color/white"
-                    android:backgroundTint="@color/blue"
+                    android:backgroundTint="@color/pink"
                     android:text="@string/save"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,12 @@ import com.example.todo_app.database.model.Tasks
       private var INSTANCE:TaskdataBase?= null
       private var DATABASE_NAME="TASKS DATABASE"
 
-      fun getInctace(context: Context):TaskdataBase{
+
+      fun getInctace():TaskdataBase{
+        return INSTANCE!!
+      }
+
+      fun init(context: Context){
         if(INSTANCE == null){
           INSTANCE=Room.databaseBuilder(context,TaskdataBase::class.java, DATABASE_NAME)
 
@@ -26,8 +31,8 @@ import com.example.todo_app.database.model.Tasks
             .allowMainThreadQueries()
             .build()
         }
-        return INSTANCE!!
-        
       }
+
+
     }
 }
