@@ -1,4 +1,4 @@
-package com.example.todo_app.database.model
+package com.example.todo.com.example.todo_app.database.model
 
 import android.os.Parcelable
 import androidx.room.Entity

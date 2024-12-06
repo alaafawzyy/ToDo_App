@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.todo.databinding.ItemTaskBinding
-import com.example.todo_app.database.model.Tasks
+import com.example.todo.com.example.todo_app.database.model.Tasks
 
 import java.text.SimpleDateFormat
 import java.util.Locale

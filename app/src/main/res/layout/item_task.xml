@@ -6,7 +6,7 @@
     <data>
         <variable
             name="task"
-            type="com.example.todo_app.database.model.Tasks" />
+            type="com.example.todo.com.example.todo_app.database.model.Tasks" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -110,7 +110,6 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="10dp"
                         android:lines="1"
-                       formatDate="@{task.date}"
                         android:textColor="#454749"
                         android:textSize="12sp"
                         android:gravity="start|center_vertical"
@@ -152,3 +151,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+    <!--
+                         formatDate="@={task.date}"
+                         -->

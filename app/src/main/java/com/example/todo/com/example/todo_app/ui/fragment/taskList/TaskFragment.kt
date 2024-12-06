@@ -1,5 +1,6 @@
 package com.example.todo.com.example.todo_app.ui.fragment.taskList
 
+
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,78 +17,60 @@ import com.example.todo_app.database.TaskdataBase
 
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import fragment.EditTaskFragment
-
-class TaskFragment:Fragment() {
+class TaskFragment : Fragment() {
     lateinit var binding: FragmentTasksBinding
-    lateinit var adabter: TaskAdapter
-     lateinit var viewModel: TaskViewModel
+    lateinit var adapter: TaskAdapter
+    lateinit var viewModel: TaskViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding=FragmentTasksBinding.inflate(inflater)
-        viewModel=ViewModelProvider(this).get(TaskViewModel::class.java)
+    ): View {
+        binding = FragmentTasksBinding.inflate(inflater)
+        viewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adabter = TaskAdapter(null)
-        obseveLivedata()
-        val editTaskFragment= EditTaskFragment()
-        val bundle=Bundle()
+        adapter = TaskAdapter(mutableListOf())
+        binding.rvTasks.adapter = adapter
 
+        observeLiveData()
 
-        adabter.setOnTaskClickListener{
-            bundle.putParcelable(Consstant.PassedTask,it)
-            editTaskFragment.arguments=bundle
-            if(activity==null) return@setOnTaskClickListener
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,editTaskFragment)
-                .commit()
-        }
-        adabter.setOnTaskClickListener{
-         TaskdataBase.getInctace().getTasksDao().DeleteTask(it)
-        }
-
-
-        viewModel.calender = Calendar.getInstance()
-        binding.rvTasks.adapter = adabter
-        var item = TaskdataBase.getInctace().getTasksDao().GetTask()
-        binding.calendarView.setOnDateChangedListener { widget, date, selected ->
+        binding.calendarView.setOnDateChangedListener { _, date, _ ->
             val year = date.year
             val month = date.month - 1
             val day = date.day
-            //بهمل التايم علشان بيحسب كل حاجه بال ثواني وبيعمل مشاكل
+
             deleteTime()
             viewModel.calender.set(Calendar.YEAR, year)
             viewModel.calender.set(Calendar.MONTH, month)
             viewModel.calender.set(Calendar.DAY_OF_MONTH, day)
-           viewModel.getTask()
 
+            viewModel.getTask()
         }
-        adabter.ubdateTask(item.toMutableList())
-        binding.calendarView.selectedDate= CalendarDay.today()
 
+        adapter.setOnTaskClickListener { task ->
+            TaskdataBase.getInctace().getTasksDao().DeleteTask(task)
+            viewModel.getTask() // تحديث بعد الحذف
+        }
+
+        binding.calendarView.selectedDate = CalendarDay.today()
     }
 
     private fun deleteTime() {
-            viewModel.calender.set(java.util.Calendar.MINUTE,0)
-           viewModel.calender. set(java.util.Calendar.MILLISECOND,0)
-           viewModel.calender.set(java.util.Calendar.SECOND,0)
-            viewModel.calender.set(java.util.Calendar.HOUR_OF_DAY,0)
-
+        viewModel.calender.set(Calendar.HOUR_OF_DAY, 0)
+        viewModel.calender.set(Calendar.MINUTE, 0)
+        viewModel.calender.set(Calendar.SECOND, 0)
+        viewModel.calender.set(Calendar.MILLISECOND, 0)
     }
-    fun obseveLivedata(){
-        viewModel.tasksLiveData.observe(viewLifecycleOwner){
-                adabter.ubdateTask(it.toMutableList())
+
+    private fun observeLiveData() {
+        viewModel.tasksLiveData.observe(viewLifecycleOwner) { tasks ->
+            adapter.ubdateTask(tasks.toMutableList())
         }
     }
-fun getTask(){
-    viewModel.getTask()
 }
 
-
-
-}

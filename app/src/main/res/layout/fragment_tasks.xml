@@ -13,9 +13,17 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:src="@color/pink"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-       />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/toolbar_title_style"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="TODO"
+        />
+
 
 
     <androidx.cardview.widget.CardView

@@ -1,25 +1,22 @@
 package com.example.todo.com.example.todo_app.ui.fragment.addtask
-
-import android.icu.util.Calendar
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.todo_app.database.TaskdataBase
-import com.example.todo_app.database.model.Tasks
+import com.example.todo.com.example.todo_app.database.model.Tasks
+import java.util.Calendar
 
+class AddTaskViewModel : ViewModel() {
 
-class AddTaskViewModel:ViewModel() {
     lateinit var calendar: Calendar
     val titleLiveData = MutableLiveData<String>()
     val descriptionLiveData = MutableLiveData<String>()
     val titleErrorLiveData = MutableLiveData<String?>()
     val descriptionErrorLiveData = MutableLiveData<String?>()
-    val isDoneLiveData=MutableLiveData(false)
+    val isDoneLiveData = MutableLiveData(false)
 
-
-    fun addTask(){
-
-      if(!ValidatField())return
+    fun addTask() {
+        if (!validateFields()) return
         val task = Tasks(
             title = titleLiveData.value.toString(),
             description = descriptionLiveData.value.toString(),
@@ -27,25 +24,22 @@ class AddTaskViewModel:ViewModel() {
             isDone = false
         )
         TaskdataBase.getInctace().getTasksDao().insertTask(task)
-          Log.w("alaa","task is inserted  $task")
-      isDoneLiveData.value=true
+        Log.w("alaa", "Task inserted: $task")
+        isDoneLiveData.value = true
     }
 
-    fun ValidatField(): Boolean {
-        var isvalid=true
+    private fun validateFields(): Boolean {
+        var isValid = true
         if (titleLiveData.value.isNullOrBlank()) {
             titleErrorLiveData.value = "Required"
-            isvalid= false
-        } else
-            titleErrorLiveData.value = null
-
+            isValid = false
+        } else titleErrorLiveData.value = null
 
         if (descriptionLiveData.value.isNullOrBlank()) {
             descriptionErrorLiveData.value = "Required"
-            isvalid= false
-        } else  descriptionErrorLiveData.value = null
+            isValid = false
+        } else descriptionErrorLiveData.value = null
 
-        return isvalid
+        return isValid
     }
-
 }

@@ -16,7 +16,7 @@ import com.example.todo.com.example.todo_app.ui.other.Consstant
 import com.example.todo.com.example.todo_app.ui.other.FormatterDate.getDateOnly
 import com.example.todo.com.example.todo_app.ui.other.FormatterDate.getTimeOnly
 import com.example.todo_app.database.TaskdataBase
-import com.example.todo_app.database.model.Tasks
+import com.example.todo.com.example.todo_app.database.model.Tasks
 
 
 class EditTaskFragment:Fragment() {
@@ -46,10 +46,11 @@ class EditTaskFragment:Fragment() {
     private fun getPassetTask() {
         arguments.let {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                tasks= requireArguments().getParcelable(Consstant.PassedTask,Tasks::class.java)?:Tasks()
+                tasks= requireArguments().getParcelable(Consstant.PassedTask,
+                    Tasks::class.java)?: Tasks()
             }
             else
-                tasks= requireArguments().getParcelable(Consstant.PassedTask)?:Tasks()
+                tasks= requireArguments().getParcelable(Consstant.PassedTask)?: Tasks()
         }
     }
     private fun bindTask(tasks: Tasks) {
@@ -60,7 +61,7 @@ class EditTaskFragment:Fragment() {
 
     }
     private fun saveTask(){
-        val newTask=Tasks(
+        val newTask= Tasks(
             tasks.id,
             title = binding.content.title.text.toString(),
             description = binding.content.description.toString(),

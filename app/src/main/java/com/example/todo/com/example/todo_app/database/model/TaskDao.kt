@@ -1,4 +1,4 @@
-package com.example.todo_app.database.model
+package com.example.todo.com.example.todo_app.database.model
 
 import androidx.room.Dao
 import androidx.room.Delete

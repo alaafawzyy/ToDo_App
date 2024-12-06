@@ -8,9 +8,7 @@ import com.example.todo.R
 import com.example.todo.com.example.todo_app.ui.fragment.addtask.AddBottomSheetFragment
 import com.example.todo.com.example.todo_app.ui.fragment.taskList.TaskFragment
 import com.example.todo.com.example.todo_app.ui.other.OnTaskAddedListener
-
 import com.example.todo.databinding.ActivityHomeBinding
-
 import fragment.SettingFragment
 
 class HomeActivity : AppCompatActivity() {
@@ -24,14 +22,12 @@ class HomeActivity : AppCompatActivity() {
         initView()
     }
 
-
     private fun initView() {
         binding.bottomNavView.selectedItemId = R.id.nav_bar_tasks
-        taskFragment = TaskFragment()
+        taskFragment = TaskFragment() // تعيين الـ Fragment هنا
         addFragment(taskFragment)
 
         binding.fabAddTask.setOnClickListener { navigateToFabAddTask() }
-
         binding.bottomNavView.setOnItemSelectedListener { bottomNavigationView(it) }
     }
 
@@ -57,19 +53,17 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun navigateToFabAddTask() {
-
         val addTaskBottomSheet = AddBottomSheetFragment()
+
         addTaskBottomSheet.onTaskAddedListener = object : OnTaskAddedListener {
             override fun OnTaskAdded() {
-
+                // التأكد من أن الـ Fragment مهيأ ومن ثم تحديث البيانات
                 if (::taskFragment.isInitialized && taskFragment.isVisible) {
-                    taskFragment.getTask()
+                    taskFragment.viewModel.getTask()
                 }
             }
         }
 
         addTaskBottomSheet.show(supportFragmentManager, "AddTaskBottomSheet")
     }
-
-
 }
