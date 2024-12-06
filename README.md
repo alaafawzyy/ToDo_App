@@ -13,28 +13,31 @@ This project is a **To-Do application** developed using Kotlin and Android Studi
 - **Data Binding:** Data binding is used for linking the UI components with the data in the app, making it more efficient to update the UI based on changes in the underlying data.
 
 <table>
-
     <tr>
-        <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/refs/heads/master/app/assets/photo_2024-12-03_21-58-43%20(3).jpg" width="200" height="400"/></td>
-
-       <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/refs/heads/master/app/assets/photo_2024-12-03_21-58-41.jpg" width="200" height="400"/></td>
-
-       <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/refs/heads/master/app/assets/photo_2024-12-03_21-58-42%20(2).jpg" width="200" height="400"/></td>
+        <td style="padding-right: 100px;padding-bottom: 100px;">
+            <img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/master/app/assets/photo_2024-12-03_21-58-43%20(3).jpg" width="200" height="400" />
+        </td>
+        <td style="padding-right: 100px;padding-bottom: 100px;">
+            <img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/master/app/assets/photo_2024-12-03_21-58-41.jpg" width="200" height="400" />
+        </td>
+        <td style="padding-right: 100px;padding-bottom: 100px;">
+            <img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/master/app/assets/photo_2024-12-03_21-58-42%20(2).jpg" width="200" height="400" />
+        </td>
     </tr>
-
-     <tr>
-        <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/refs/heads/master/app/assets/photo_2024-12-03_21-58-43%20(2).jpg" width="200" height="400"/></td>
-
-       <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/refs/heads/master/app/assets/photo_2024-12-03_21-58-43.jpg" width="200" height="400"/></td>
-
-       <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://github.com/alaafawzyy/ToDo_App/blob/master/app/assets/photo_2024-12-03_21-58-41.jpg" width="200" height="400"/></td>
+    <tr>
+        <td style="padding-right: 100px;padding-bottom: 100px;">
+            <img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/master/app/assets/photo_2024-12-03_21-58-43%20(2).jpg" width="200" height="400" />
+        </td>
+        <td style="padding-right: 100px;padding-bottom: 100px;">
+            <img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/master/app/assets/photo_2024-12-03_21-58-43.jpg" width="200" height="400" />
+        </td>
+        <td style="padding-right: 100px;padding-bottom: 100px;">
+             <img src="https://raw.githubusercontent.com/alaafawzyy/ToDo_App/master/app/assets/photo_2024-12-06_21-07-07.jpg" width="200" height="400" />
+        </td>
     </tr>
-
-     <tr>
-        <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://github.com/alaafawzyy/ToDo_App/blob/master/app/assets/photo_2024-12-06_21-07-07.jpg" width="200" height="400"/></td>
-    </tr>
-
+   
 </table>
+
 
 
 
